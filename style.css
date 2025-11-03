@@ -24,10 +24,42 @@ body {
   padding-top: 50px;
 }
 
+.site-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 .site-title {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 10px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .site-header {
+    padding-top: 30px;
+  }
+
+  .site-logo {
+    max-width: 150px;
+  }
+
+  .site-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    max-width: 120px;
+  }
+
+  .site-title {
+    font-size: 16px;
+  }
 }
 
 /* chat window */
@@ -37,7 +69,7 @@ body {
 
 .chat-window {
   height: 360px;
-  border: 1px solid #000;
+  border: 1px solid #E3a535;
   padding: 20px;
   font-size: 18px;
   line-height: 1.5;
@@ -50,14 +82,27 @@ body {
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: 75%;
+  word-wrap: break-word;
 }
 
+/* User messages - right aligned */
 .msg.user {
   color: #000;
+  background: #e3f2fd;
+  margin-left: auto;
+  text-align: right;
 }
 
-.msg.ai {
-  color: #666666;
+/* Assistant messages - left aligned */
+.msg.assistant {
+  color: #333;
+  background: #ffffff;
+  margin-right: auto;
+  text-align: left;
+  border: 1px solid #e0e0e0;
 }
 
 /* input row */
@@ -83,7 +128,7 @@ body {
   font-size: 18px;
   background: #000;
   color: #fff;
-  border: none;
+  border: 1px solid #E3a535;
   padding: 12px;
   width: 48px;
   height: 48px;
@@ -96,10 +141,11 @@ body {
 
 .chat-form button .material-icons {
   font-size: 24px;
+  color: #E3a535;
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: slategray;
 }
 
 .chat-form button:focus {
